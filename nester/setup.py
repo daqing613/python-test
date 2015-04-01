@@ -6,6 +6,6 @@ setup(
         py_modules   = ['nester'],
         author       = 'Daniel Wong',
         author_email = 'danielwang461@gmail.com',
-        url          = 'http://daqing613.github.io',
+        url          = 'http://www.dwong.in',
         description  = 'A simple printer of nested lists',
     )
