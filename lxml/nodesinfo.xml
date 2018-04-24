@@ -97,5 +97,43 @@
       <diskNode>78</diskNode>
       <scheduleTags/>
     </item>
+    <item>
+      <nodeId>node-10-10-18-113@10.10.18.113</nodeId>
+      <nodeName>node-10-10-18-113-CPU&#x4E0D;&#x540C;</nodeName>
+      <clusterId>cc2</clusterId>
+      <status>available</status>
+      <cpuMax>16</cpuMax>
+      <cpuUsed>7</cpuUsed>
+      <memoryMax>15881</memoryMax>
+      <memoryUsed>11264</memoryUsed>
+      <diskMax>78</diskMax>
+      <diskUsed>0</diskUsed>
+      <cpuCores>4</cpuCores>
+      <cpuSockets>1</cpuSockets>
+      <cpuModel>Intel(R) Xeon(R) CPU           E5410  @ 2.33GHz</cpuModel>
+      <cpuNode>4</cpuNode>
+      <memNode>15881</memNode>
+      <diskNode>78</diskNode>
+      <scheduleTags/>
+    </item>
+    <item>
+      <nodeId>node-10-10-18-114@10.10.18.114</nodeId>
+      <nodeName>node-10-10-18-114-CPU&#x4E0D;&#x540C;</nodeName>
+      <clusterId>cc2</clusterId>
+      <status>available</status>
+      <cpuMax>16</cpuMax>
+      <cpuUsed>7</cpuUsed>
+      <memoryMax>15881</memoryMax>
+      <memoryUsed>11264</memoryUsed>
+      <diskMax>78</diskMax>
+      <diskUsed>0</diskUsed>
+      <cpuCores>4</cpuCores>
+      <cpuSockets>2</cpuSockets>
+      <cpuModel>Intel(R) Xeon(R) CPU           E5410  @ 2.33GHz</cpuModel>
+      <cpuNode>4</cpuNode>
+      <memNode>15881</memNode>
+      <diskNode>78</diskNode>
+      <scheduleTags/>
+    </item>
   </nodeSet>
 </DescribeNodesResponse>
