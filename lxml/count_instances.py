@@ -16,47 +16,32 @@ def parseXML(xmlFile):
     xml = f.read()
     f.close()
 
+    tree = etree.parse(StringIO(xml))
+    # for child in root:
+    #     print child.tag, child.attrib
+    # count =
+    # for tag in count:
+    #     print tag.text
+    run_count = 0
+    stop_count = 0
+    ter_count = 0
+    count = 0
+    # body = tree.xpath("//*[local-name() = 'instanceId']")
+    body = tree.xpath("//*[local-name() = 'name']")
+    for elem in body:
+        count += 1
+        if elem.text == "running":
+            run_count += 1
+        elif elem.text == "stopped":
+            stop_count += 1
+        elif elem.text == "terminated":
+            ter_count += 1
+    print run_count
+    print stop_count
+    print ter_count
+    print count
 
 #    storagemax = 0
-#     storage_dict = {}
-
-    tree = etree.parse(StringIO(xml))
-
-
-
- #  getroot means.
-
-    root = tree.getroot()
-
-    storages_list = []
-    for node in root:
-        childs = node.getchildren()
-        for elems in childs:
-            storage_dict = {}
-            for sub_elem in elems:
-                if '}' in sub_elem.tag:
-                    sub_elem.tag = sub_elem.tag.split('}', 1)[1]
-                for tags in ['storageName', 'clusterId', 'storageType', 'spaceMax', 'spaceUsed']:
-                    if sub_elem.tag == tags:
-                        storage_dict[sub_elem.tag] = sub_elem.text
-            if storage_dict['storageType'] != 'ceph':
-                pass
-            else:
-                storages_list.append({k: v for (k, v) in storage_dict.items() if k != 'storageType'})
-    print storages_list
-
-
-
-
-# Specify the element item list index .
-#    body = tree.xpath("//*[local-name() = 'item']")[0]
-#    for elem in body:
-#        if '}' in elem.tag:
-#            elem.tag = elem.tag.split('}', 1)[1]
-#            for tags in ['storageName', 'clusterId', 'spaceMax', 'spaceUsed']:
-#                if elem.tag == tags:
-#                    storage_dict[elem.tag] = elem.text
-#    print storage_dict
 
 
 
@@ -124,6 +109,5 @@ def parseXML(xmlFile):
 #    print storages
 
 
-
 if __name__ == "__main__":
-    parseXML("storages_pro.xml")
+    parseXML("instances_pro.xml")
